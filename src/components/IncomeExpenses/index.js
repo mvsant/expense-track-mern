@@ -1,20 +1,19 @@
 import React from "react";
-import './index.css'
+import "./index.css";
 
-
- const IncomeExpenses = () => {
-    return (
-        <div className="inc-exp-container">
-        <div>
-          <h4>Income</h4>
-          <p id="money-plus" className="money plus">+$0.00</p>
-        </div>
-        <div>
-          <h4>Expense</h4>
-          <p id="money-minus" className="money minus">-$0.00</p>
-        </div>
+const IncomeExpenses = () => {
+  return (
+    <div className="inc-exp-container">
+      <div>
+        <h4>Income</h4>
+        <p className="money plus">+$0.00</p>
       </div>
-    )
-}
+      <div>
+        <h4>Expense</h4>
+        <p className="money minus">-$0.00</p>
+      </div>
+    </div>
+  );
+};
 
 export default IncomeExpenses;
