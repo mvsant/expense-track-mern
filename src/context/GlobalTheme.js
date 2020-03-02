@@ -9,6 +9,15 @@
   }
 }; */
 
+export const textColor = {
+  light: {
+    color: 'navy'
+  },
+  dark:{
+    color: '#bbe1fa'
+  }
+}
+
 
 export function cTheme(theme,component) {
   return theme === "light" ? component.light : component.dark;
