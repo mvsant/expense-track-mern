@@ -1,13 +1,14 @@
 import React, { useState, useContext } from "react";
-import "./index.css";
-
+import {cTheme, useHover} from '../../context/GlobalTheme';
+import { button, buttonHover } from "./theme";
 import { GlobalContext } from "../../context/GlobalState";
 
 const AddTransaction = () => {
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
+  const [hoverRef, isHovered] = useHover();
 
-  const { addTransaction } = useContext(GlobalContext);
+  const { addTransaction, theme } = useContext(GlobalContext);
 
   const onSubmit = event => {
     event.preventDefault();
@@ -45,7 +46,9 @@ const AddTransaction = () => {
             placeholder="Enter amount..."
           />
         </div>
-        <button className="btn">Add transaction</button>
+        <button ref={hoverRef}
+        
+        style={isHovered ? buttonHover : button}>Add transaction</button>
       </form>
     </>
   );
