@@ -4,7 +4,7 @@ import appReducer from "./AppReducer";
 // Initial state
 const initialState = {
   transactions: [],
-  theme:'light'
+  theme: "light"
 };
 
 // Create context
