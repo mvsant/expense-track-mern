@@ -9,11 +9,11 @@ export const h2 = {
 
 export const button = {
   light: {
-    color: "#000000",
+    color: "#ffffff",
     background: "#222222"
   },
   dark: {
-    color: "#ffffff",
-    background: "#000000"
+    color: "#222222",
+    background: "#fdfdfd"
   }
 };
