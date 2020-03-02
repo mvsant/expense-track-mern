@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
-import "./index.css";
-
+import {cTheme, textColor} from '../../context/GlobalTheme';
+import {container, div} from './theme';
 import { GlobalContext } from "../../context/GlobalState";
+import {} from '../../context/GlobalState';
 
 const IncomeExpenses = () => {
-  const { transactions } = useContext(GlobalContext);
+  const { transactions, theme } = useContext(GlobalContext);
 
   const amounts = transactions.map(transaction => transaction.amount);
 
@@ -19,13 +20,13 @@ const IncomeExpenses = () => {
   ).toFixed(2);
 
   return (
-    <div className="inc-exp-container">
-      <div>
-        <h4>Income</h4>
+    <div style={cTheme(theme,container)}>
+      <div style={div}>
+        <h4 style={cTheme(theme,textColor)}>Income</h4>
         <p className="money plus">{income}</p>
       </div>
-      <div>
-        <h4>Expense</h4>
+      <div style={div}>
+        <h4 style={cTheme(theme,textColor)}>Expense</h4>
         <p className="money minus">{expense}</p>
       </div>
     </div>
