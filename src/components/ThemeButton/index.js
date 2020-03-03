@@ -12,7 +12,11 @@ const ThemeButton = () => {
 
   return (
     <>
-      <input id="input-bulb"type="checkbox" onClick={() => changeTheme(handleTheme())}/>
+      <input
+        id="input-bulb"
+        type="checkbox"
+        onClick={() => changeTheme(handleTheme())}
+      />
       <label id="bulb" htmlFor="input-bulb"></label>
     </>
   );
