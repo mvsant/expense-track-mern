@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import {deleteButton, deleteButtonHover,listItem, borderPositive, borderNegative} from './theme';
 import { GlobalContext } from "../../context/GlobalState";
-import {textColor,cTheme, useHover} from '../../context/GlobalTheme';
+import {cTheme, useHover} from '../../context/GlobalTheme';
 
 const Transaction = ({ transaction }) => {
   const { deleteTransaction, theme } = useContext(GlobalContext);
