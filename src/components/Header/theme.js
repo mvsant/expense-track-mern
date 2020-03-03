@@ -1,10 +1,10 @@
-export const button = {
-  light: {
-    color: "#ffffff",
-    background: "#222222"
-  },
-  dark: {
-    color: "#222222",
-    background: "#fdfdfd"
-  }
-};
+export const divStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent:'space-between',
+}
+
+export const div = {
+width:'30px',
+margin:'15px'
+}
