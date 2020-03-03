@@ -19,8 +19,8 @@ function App() {
         <main>
           <Balance />
           <IncomeExpenses />
-          <TransactionList />
           <AddTransaction />
+          <TransactionList />
         </main>
       </BodyWrapper>
     </GlobalProvider>
