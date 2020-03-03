@@ -7,7 +7,7 @@ const styledContainer = {
     margin: '20px 0',
   }
 
-  export const lilBar = {borderRight: '1px solid #dedede'};
+  export const lineBar = {borderRight: '1px solid #dedede'};
 
   export const div = {
     flex: 1,

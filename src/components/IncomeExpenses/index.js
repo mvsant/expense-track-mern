@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import {cTheme, textColor} from '../../context/GlobalTheme';
-import {container, div} from './theme';
+import {container, div, lineBar} from './theme';
 import { GlobalContext } from "../../context/GlobalState";
 import {} from '../../context/GlobalState';
 
@@ -21,7 +21,7 @@ const IncomeExpenses = () => {
 
   return (
     <div style={cTheme(theme,container)}>
-      <div style={div}>
+      <div style={Object.assign({},div,lineBar)}>
         <h4 style={cTheme(theme,textColor)}>Income</h4>
         <p className="money plus">{income}</p>
       </div>
