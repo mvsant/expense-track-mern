@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { cTheme, textColor } from "../../context/GlobalTheme";
-import { container, div, lineBar } from "./theme";
+import { cTheme, textColor, textPositive, textNegative } from "../../context/GlobalTheme";
+import { container, div, lineBar} from "./theme";
 import { GlobalContext } from "../../context/GlobalState";
 import {} from "../../context/GlobalState";
 
@@ -23,11 +23,11 @@ const IncomeExpenses = () => {
     <div style={cTheme(theme, container)}>
       <div style={Object.assign({}, div, lineBar)}>
         <h4 style={cTheme(theme, textColor)}>Income</h4>
-        <p className="money plus">{income}</p>
+        <p style={textPositive}>{income}</p>
       </div>
       <div style={div}>
         <h4 style={cTheme(theme, textColor)}>Expense</h4>
-        <p className="money minus">{expense}</p>
+        <p style={textNegative}>{expense}</p>
       </div>
     </div>
   );

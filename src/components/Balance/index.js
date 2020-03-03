@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { container } from "./theme";
-import { cTheme, textColor } from "../../context/GlobalTheme";
+import { cTheme, textColor, textPositive, textNegative} from "../../context/GlobalTheme";
 
 import { GlobalContext } from "../../context/GlobalState";
 
@@ -13,7 +13,7 @@ const Balance = () => {
   return (
     <div style={(container, cTheme(theme, textColor))}>
       <h4>Your Balance</h4>
-      <h1>${total}</h1>
+      <h1 style={total>= 0? textPositive:textNegative}>${total}</h1>
     </div>
   );
 };

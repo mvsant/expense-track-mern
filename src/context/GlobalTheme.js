@@ -9,6 +9,13 @@ export const textColor = {
   }
 };
 
+export const textPositive = {
+  color: "#2ecc71"
+};
+export const textNegative = {
+  color: "#c0392b"
+};
+
 export function cTheme(theme, component) {
   return theme === "light" ? component.light : component.dark;
 }
