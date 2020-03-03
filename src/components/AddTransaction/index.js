@@ -24,6 +24,7 @@ const AddTransaction = () => {
   return (
     <div style={cTheme(theme, textColor)}>
       <h3>Add new transaction</h3>
+      <br/>
       <form onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="text">Text</label>
@@ -42,6 +43,8 @@ const AddTransaction = () => {
           <input
             type="number"
             value={amount}
+            pattern="[0-9]+([,\.][0-9]+)?"
+            step="0.01"
             onChange={event => setAmount(event.target.value)}
             placeholder="Enter amount..."
           />
