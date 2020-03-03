@@ -1,3 +1,33 @@
+const styledListItem = {
+    backgroundColor: '#fff',
+    boxShadow: 'var(--box-shadow)',
+    color: '#333',
+    display: 'flex',
+    justifyContent: 'space-between',
+    position: 'relative',
+    padding: '10px',
+    margin: '10px 0',
+}
+
+export const borderPositive = {
+    borderRight: '5px solid #2ecc71',
+}
+export const borderNegative = {
+    borderRight: '5px solid #c0392b',
+}
+
+export const listItem = {
+    light: {
+        ...styledListItem,
+    },
+    dark: {
+        ...styledListItem,
+        backgroundColor: '#333',
+        color: '#fff',
+        filter: 'brightness(135%)',
+    }
+}
+
 const styledDeleteButton = {
         cursor: 'pointer',
         backgroundColor: '#e74c3c',
