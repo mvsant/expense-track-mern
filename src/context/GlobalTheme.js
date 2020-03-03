@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export const textColor = {
   light: {
@@ -35,7 +35,7 @@ export function useHover() {
       }
     },
 
-    [ref.current] // Recall only if ref changes
+    [] // Recall only if ref changes
   );
 
   return [ref, value];
