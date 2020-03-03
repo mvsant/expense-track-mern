@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import {cTheme, useHover} from '../../context/GlobalTheme';
+import {textColor,cTheme, useHover} from '../../context/GlobalTheme';
 import { button, buttonHover } from "./theme";
 import { GlobalContext } from "../../context/GlobalState";
 
@@ -22,7 +22,7 @@ const AddTransaction = () => {
   };
 
   return (
-    <>
+    <div style={cTheme(theme,textColor)}>
       <h3>Add new transaction</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
@@ -50,7 +50,7 @@ const AddTransaction = () => {
         
         style={isHovered ? buttonHover : button}>Add transaction</button>
       </form>
-    </>
+    </div>
   );
 };
 
