@@ -1,0 +1,17 @@
+#bulb {
+    margin: 2% 6%;
+    background-image: url("../../assets/lightbulb_off.png");
+    display: block;
+    max-width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  input:checked + #bulb {
+    background-image: url("../../assets/lightbulb_on.png");
+  }
+  
+  input {
+    display: none;
+  }

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import { cTheme, textColor } from "../../context/GlobalTheme";
 import { button } from "./theme";
+import ThemeButton from '../ThemeButton';
 
 const Header = () => {
   const { theme } = useContext(GlobalContext);
@@ -15,6 +16,7 @@ const Header = () => {
       <h2 style={cTheme(theme, textColor)}>Expense tracker</h2>
       <button style={cTheme(theme, button)}>Theme son</button>
       <button onClick={() => changeTheme(handleTheme())}>Change theme</button>
+      <ThemeButton/>
     </>
   );
 };
