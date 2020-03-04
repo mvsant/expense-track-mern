@@ -8,6 +8,7 @@ import {
 } from "./theme";
 import { GlobalContext } from "../../context/GlobalState";
 import { cTheme, useHover } from "../../context/GlobalTheme";
+import {numberWithCommas} from '../../utils/format';
 
 const Transaction = ({ transaction }) => {
   const { deleteTransaction, theme } = useContext(GlobalContext);
@@ -26,7 +27,7 @@ const Transaction = ({ transaction }) => {
     >
       {transaction.text}{" "}
       <span>
-        {sign}${Math.abs(transaction.amount)}
+        {sign}${numberWithCommas(Math.abs(transaction.amount).toFixed(2))}
       </span>
       <button
         ref={hoverRef}
@@ -35,7 +36,7 @@ const Transaction = ({ transaction }) => {
             ? cTheme(theme, deleteButton)
             : cTheme(theme, deleteButtonHover)
         }
-        onClick={() => deleteTransaction(transaction.id)}
+        onClick={() => deleteTransaction(transaction._id)}
       >
         X
       </button>

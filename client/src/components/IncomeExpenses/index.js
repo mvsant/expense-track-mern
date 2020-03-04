@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { cTheme, textColor, textPositive, textNegative } from "../../context/GlobalTheme";
 import { container, div, lineBar} from "./theme";
 import { GlobalContext } from "../../context/GlobalState";
-import {} from "../../context/GlobalState";
+import {numberWithCommas} from '../../utils/format';
 
 const IncomeExpenses = () => {
   const { transactions, theme } = useContext(GlobalContext);
@@ -23,11 +23,11 @@ const IncomeExpenses = () => {
     <div style={cTheme(theme, container)}>
       <div style={Object.assign({}, div, lineBar)}>
         <h4 style={cTheme(theme, textColor)}>Income</h4>
-        <p style={textPositive}>{income}</p>
+        <p style={textPositive}>${numberWithCommas(income)}</p>
       </div>
       <div style={div}>
         <h4 style={cTheme(theme, textColor)}>Expense</h4>
-        <p style={textNegative}>{expense}</p>
+        <p style={textNegative}>${numberWithCommas(expense)}</p>
       </div>
     </div>
   );

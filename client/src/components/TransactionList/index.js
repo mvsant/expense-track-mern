@@ -16,7 +16,7 @@ const TransactionList = () => {
       <h3 style={cTheme(theme, textColor)}>History</h3>
       <ul style={list}>
         {transactions.map(transaction => (
-          <Transaction key={transaction.id} transaction={transaction} />
+          <Transaction key={transaction._id} transaction={transaction} />
         ))}
       </ul>
     </>

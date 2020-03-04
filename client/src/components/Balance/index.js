@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { container } from "./theme";
 import { cTheme, textColor, textPositive, textNegative} from "../../context/GlobalTheme";
+import {numberWithCommas} from '../../utils/format';
 
 import { GlobalContext } from "../../context/GlobalState";
 
@@ -13,7 +14,7 @@ const Balance = () => {
   return (
     <div style={(container, cTheme(theme, textColor))}>
       <h4>Your Balance</h4>
-      <h1 style={total>= 0? textPositive:textNegative}>${total}</h1>
+      <h1 style={total>= 0? textPositive:textNegative}>${numberWithCommas(total)}</h1>
     </div>
   );
 };
