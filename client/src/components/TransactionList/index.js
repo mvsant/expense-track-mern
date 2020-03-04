@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { list } from "./theme";
 import Transaction from "../Transaction";
 import { cTheme, textColor } from "../../context/GlobalTheme";
 import { GlobalContext } from "../../context/GlobalState";
 
 const TransactionList = () => {
-  const { transactions, theme } = useContext(GlobalContext);
+  const { transactions, theme, getTransactions } = useContext(GlobalContext);
+
+  useEffect(() => {
+    getTransactions();
+  },[])
 
   return (
     <>
