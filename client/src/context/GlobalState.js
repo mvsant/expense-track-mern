@@ -21,7 +21,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function getTransactions() {
     try{
-      const response = await axios.get('/api/v/transactions');
+      const response = await axios.get('/api/v1/transactions');
       dispatch({
         type: 'GET_TRANSACTIONS',
         payload: response.data.data
@@ -35,18 +35,45 @@ export const GlobalProvider = ({ children }) => {
     }
   }
 
-  function deleteTransaction(id) {
-    dispatch({
-      type: "DELETE_TRANSACTION",
-      payload: id
-    });
+  async function deleteTransaction(id) {
+    try{
+      await axios.delete(`/api/v1/transactions/${id}`);
+      dispatch({
+        type: "DELETE_TRANSACTION",
+        payload: id
+      });
+
+    }
+    catch(err){
+      dispatch({
+        type: 'TRANSACTION_ERROR',
+        payload: err.response.data.error
+      })
+    }
   }
 
-  function addTransaction(trasaction) {
-    dispatch({
-      type: "ADD_TRANSACTION",
-      payload: trasaction
-    });
+  async function addTransaction(trasaction) {
+    const config = {
+      headers: {
+        'Content-type': 'application/json'
+      }
+    };
+    
+    try {
+      const response = await axios.post('/api/v1/transactions', trasaction, config);
+
+      dispatch({
+        type: "ADD_TRANSACTION",
+        payload: response.data.data
+      });
+      
+    }
+    catch(err){
+      dispatch({
+        type: 'TRANSACTION_ERROR',
+        payload: err.response.data.error
+      })
+    }
   }
 
   function changeTheme(theme) {
