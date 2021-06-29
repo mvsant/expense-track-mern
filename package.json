@@ -1,4 +1,13 @@
 {
+<<<<<<< HEAD
+  "name": "expense-tracker",
+  "version": "0.1.1",
+  "private": true,
+||||||| 2e120eb
+  "name": "expense-tracker",
+  "version": "0.1.0",
+  "private": true,
+=======
   "name": "expense-tracker-mern",
   "version": "1.0.0",
   "description": "Expense tracker app using mern stack",
@@ -27,12 +36,29 @@
   ],
   "author": "Marlon Veiga",
   "license": "MIT",
+>>>>>>> main
   "dependencies": {
+<<<<<<< HEAD
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3"
+||||||| 2e120eb
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-scripts": "3.4.0"
+=======
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1"
+>>>>>>> main
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
